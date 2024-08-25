@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
@@ -9,10 +10,11 @@ const Hero = () => {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Connect with Your Alumni Community
           </h1>
           <p className="mb-8 leading-relaxed">Join our vibrant alumni network through user-friendly platforms. Update your profile, donate, and explore career opportunities. Stay connected, share success stories, and participate in events to foster lifelong connections with your peers and alma mater. Your journey continues here!
-
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 transition duration-150 rounded text-lg">Join Now</button>
+            <button className="inline-flex text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 transition duration-150 rounded text-lg">
+              <Link href='/signup'>Join Now</Link>
+            </button>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 shadow-2xl">

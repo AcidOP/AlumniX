@@ -7,17 +7,17 @@ const faqArray: FAQ[] = [
   {
     question: "How do I register as an alumnus?",
     answer:
-      "You can easily register by clicking the 'Join Now' button on the homepage and filling out the registration form with your graduation details and contact information.",
+      "You can easily register by clicking the 'Join Now' button on the homepage.",
   },
   {
     question: "Can I update my profile information after registering?",
     answer:
-      "Yes, you can update your profile at any time by logging into your account and navigating to the 'Profile' section.",
+      "Yes, you can update your profile at any time.",
   },
   {
     question: "How can I make a donation to the college?",
     answer:
-      "Donations can be made securely through our Donation Portal, accessible via the 'Donate' button on both the web and mobile platforms.",
+      "Donations can be made securely through our Donation Portal, accessible via the 'Donate' button.",
   },
   // {
   //   question: "How do I connect with other alumni in my industry?",

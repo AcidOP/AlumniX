@@ -4,7 +4,7 @@ import { MdWork } from "react-icons/md";
 import { FaCrown } from "react-icons/fa";
 import { FaNetworkWired } from "react-icons/fa";
 import { IoLogoWechat } from "react-icons/io5";
-import { GiSwordwoman, GiReceiveMoney, GiGlassCelebration } from "react-icons/gi";
+import { GiReceiveMoney, GiGlassCelebration } from "react-icons/gi";
 
 interface FunctionItem {
   heading: string;
