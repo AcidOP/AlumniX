@@ -1,8 +1,8 @@
-import CTA from '@/components/CTA/CTA'
-import Gallery from '@/components/Gallery'
-import Hero from '@/components/Hero'
-import Stats from '@/components/Stats'
-import FAQ from '@/components/FAQ'
+import CTA from '@/components/CTA/CTA';
+import FAQ from '@/components/FAQ';
+import Gallery from '@/components/Gallery';
+import Hero from '@/components/Hero';
+import Stats from '@/components/Stats';
 
 const Homepage = () => {
   return (
@@ -13,7 +13,7 @@ const Homepage = () => {
       <Stats />
       <FAQ />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

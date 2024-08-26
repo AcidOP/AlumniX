@@ -1,9 +1,7 @@
-import CTA from './CTA'
+import CTA from './CTA';
 
 const index = () => {
-  return (
-    <CTA />
-  )
-}
+  return <CTA />;
+};
 
-export default index
+export default index;

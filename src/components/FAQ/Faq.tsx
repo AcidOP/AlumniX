@@ -1,4 +1,4 @@
-import cn from "@/utils/cn";
+import cn from '@/utils/cn';
 
 interface IProps {
   question: string;
@@ -8,13 +8,20 @@ interface IProps {
 
 const Faq = ({ question, answer, className }: IProps) => {
   return (
-    <details className={cn("open:bg-green-50 duration-300 mx-5 lg:mx-0", className)}>
-      <summary className="bg-inherit px-5 py-3 text-lg cursor-pointer font-medium">{question}</summary>
-      <div className="bg-white px-5 py-3 leading-relaxed">
+    <details
+      className={cn(
+        'mx-5 duration-300 open:bg-green-50 lg:mx-0',
+        className,
+      )}
+    >
+      <summary className='cursor-pointer bg-inherit px-5 py-3 text-lg font-medium'>
+        {question}
+      </summary>
+      <div className='bg-white px-5 py-3 leading-relaxed'>
         <p>{answer}</p>
       </div>
     </details>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;
