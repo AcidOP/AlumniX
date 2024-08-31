@@ -1,7 +1,13 @@
-import React from 'react';
+'use client';
+
+import { useRouter } from 'next/navigation';
 
 const Dashboard = () => {
-  return <div className='h-screen w-full'>Dashboard</div>;
+  const router = useRouter();
+
+  router.push('/dashboard/alumni-directory');
+
+  return <></>;
 };
 
 export default Dashboard;
