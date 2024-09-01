@@ -8,13 +8,16 @@ generator client {
 }
 
 model User {
-  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  id            String       @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
-  email         String?   @unique
+  email         String?      @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+  metadata      Metadata[]
+  jobPostings   JobPosting[]
+  event         Event[]
 
   verificationTokens VerificationToken[]
 
@@ -64,4 +67,55 @@ model VerificationToken {
   User       User?    @relation(fields: [userId], references: [id])
 
   @@unique([identifier, token])
+}
+
+model Metadata {
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  graduationYear  Int?
+  degree          String?
+  major           String?
+  jobTitle        String?
+  companyName     String?
+  linkedInProfile String?
+  achievements    String?
+  bio             String?
+  address         String?
+  phoneNumber     String?
+
+  updatedAt DateTime @updatedAt
+
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model JobPosting {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  description     String
+  companyName     String
+  location        String
+  salaryRange     String?
+  jobType         String
+  applicationLink String
+  postedAt        DateTime  @default(now())
+  expiresAt       DateTime?
+  updatedAt       DateTime  @updatedAt
+
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Event {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  location    String
+  startTime   DateTime
+  endTime     DateTime
+  eventLink   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

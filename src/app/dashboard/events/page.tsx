@@ -1,4 +1,4 @@
-import EventsCard from '@/components/EventsCard';
+import EventsCard from '@/components/cards/EventsCard';
 import alumniEventsData from '@/data/events';
 
 const EventsPage = () => {

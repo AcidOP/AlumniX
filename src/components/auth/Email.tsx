@@ -17,7 +17,7 @@ const Icon = () => {
   );
 };
 
-export function SignIn() {
+const EmailSignIn = () => {
   return (
     <form action={magicLink} className='mx-auto flex max-w-xs flex-col'>
       <input
@@ -25,6 +25,7 @@ export function SignIn() {
         type='email'
         name='email'
         placeholder='Email'
+        required
       />
 
       <button className='focus:shadow-outline mt-5 flex w-full items-center justify-center rounded-lg bg-green-600 py-4 font-semibold tracking-wide text-gray-100 transition-all duration-300 ease-in-out hover:bg-green-700 focus:outline-none'>
@@ -33,4 +34,6 @@ export function SignIn() {
       </button>
     </form>
   );
-}
+};
+
+export default EmailSignIn;

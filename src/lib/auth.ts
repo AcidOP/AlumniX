@@ -12,5 +12,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       from: 'acid@anshumaan.art',
     }),
   ],
-  debug: true,
+  debug: process.env.ENVIRON === 'DEVELOPMENT',
 });

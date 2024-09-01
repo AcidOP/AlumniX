@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Auth from './Auth';
+import Mid from './Mid';
+
 import Link from 'next/link';
 
 const Header = () => {
@@ -25,16 +28,9 @@ const Header = () => {
           <span className='ml-3 text-xl'>AlumniX</span>
         </Link>
 
-        <nav className='flex flex-wrap items-center justify-center text-base md:ml-auto md:mr-auto'></nav>
+        <Mid />
 
-        <div>
-          <Link href='/signin' className='mr-5 hover:text-gray-900'>
-            Login
-          </Link>
-          <button className='mt-4 rounded bg-green-700 px-4 py-2 text-white transition duration-150 hover:bg-green-800 md:mt-0'>
-            <Link href='/signup'>Sign Up</Link>
-          </button>
-        </div>
+        <Auth />
       </div>
     </header>
   );
