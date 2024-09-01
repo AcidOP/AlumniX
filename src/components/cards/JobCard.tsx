@@ -9,7 +9,7 @@ interface JobPosting {
   companyName: string;
   location: string;
   jobType: string;
-  applicationLink: string;
+  applicationLink: string | null;
   postedAt: Date;
   expiresAt: Date | null;
   updatedAt: Date;
@@ -56,14 +56,16 @@ const JobCard = async ({
         )}
 
         <div className='mt-3'>
-          <a
-            href={applicationLink}
-            target='_blank'
-            referrerPolicy='no-referrer'
-            className='mt-3 rounded-md bg-black px-4 py-2 text-white'
-          >
-            Apply
-          </a>
+          {applicationLink && (
+            <a
+              href={applicationLink}
+              target='_blank'
+              referrerPolicy='no-referrer'
+              className='mt-3 rounded-md bg-black px-4 py-2 text-white'
+            >
+              Apply
+            </a>
+          )}
         </div>
       </section>
     </div>

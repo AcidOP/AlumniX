@@ -110,9 +110,10 @@ model Event {
   title       String
   description String
   location    String
-  startTime   DateTime
-  endTime     DateTime
+  startTime   String
+  endTime     String
   eventLink   String?
+  eventType   String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 

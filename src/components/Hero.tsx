@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
           <div className='flex justify-center'>
             <button className='inline-flex rounded border-0 bg-green-700 px-6 py-2 text-lg text-white transition duration-150 hover:bg-green-800 focus:outline-none'>
-              <Link href='/signup'>Join Now</Link>
+              <Link href='/login'>Join Now</Link>
             </button>
           </div>
         </div>

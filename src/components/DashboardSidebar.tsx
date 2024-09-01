@@ -1,35 +1,18 @@
-import React from 'react';
-
-import Link from 'next/link';
-
-interface MenuProps {
-  link: string;
-  text: string;
-}
-
-const Menu = ({ link, text }: MenuProps) => {
-  return (
-    <li>
-      <Link
-        href={link}
-        className='block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100'
-      >
-        {text}
-      </Link>
-    </li>
-  );
-};
+import MenuBtn from './buttons/MenuBtn';
 
 const DashboardSidebar = () => {
   return (
     <div className='hidden h-[80vh] flex-col justify-between lg:flex'>
       <div className='w-max px-4 pb-6'>
         <ul className='space-y-1'>
-          <Menu link='/dashboard/alumni-directory' text='Alumni Members' />
-          <Menu link='/dashboard/jobs' text='Job Portal' />
-          <Menu link='/dashboard/events' text='Events' />
-          <Menu link='/dashboard/donate' text='Donation' />
-          <Menu link='/dashboard/feedback' text='Feedback' />
+          <MenuBtn
+            link='/dashboard/alumni-directory'
+            text='Alumni Members'
+          />
+          <MenuBtn link='/dashboard/jobs' text='Job Portal' />
+          <MenuBtn link='/dashboard/events' text='Events' />
+          <MenuBtn link='/dashboard/donate' text='Donation' />
+          <MenuBtn link='/dashboard/feedback' text='Feedback' />
 
           <li>
             <details className='group [&_summary::-webkit-details-marker]:hidden'>
@@ -53,9 +36,9 @@ const DashboardSidebar = () => {
               </summary>
 
               <ul className='mt-2 space-y-1 px-4'>
-                <Menu link='/account' text='Profile' />
-                <Menu link='/account/settings' text='Settings' />
-                <Menu link='/signout' text='Log Out' />
+                <MenuBtn link='/account' text='Profile' />
+                <MenuBtn link='/account/settings' text='Settings' />
+                <MenuBtn link='/signout' text='Log Out' />
               </ul>
             </details>
           </li>
