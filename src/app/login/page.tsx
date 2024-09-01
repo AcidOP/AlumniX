@@ -8,8 +8,9 @@ import { redirect } from 'next/navigation';
 
 const SignIN = async () => {
   const session = await auth();
+
   if (session) {
-    redirect('/login');
+    redirect('/dashboard');
   }
 
   return (
