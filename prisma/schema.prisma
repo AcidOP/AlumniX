@@ -8,16 +8,18 @@ generator client {
 }
 
 model User {
-  id            String       @id @default(auto()) @map("_id") @db.ObjectId
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
-  email         String?      @unique
+  email         String?   @unique
   emailVerified DateTime?
   image         String?
-  accounts      Account[]
-  sessions      Session[]
-  metadata      Metadata[]
-  jobPostings   JobPosting[]
-  event         Event[]
+
+  accounts    Account[]
+  sessions    Session[]
+  metadata    Metadata[]
+  jobPostings JobPosting[]
+  event       Event[]
+  feedbacks   Feedback[]
 
   verificationTokens VerificationToken[]
 
@@ -118,7 +120,16 @@ model Event {
   eventType            String?
   createdAt            DateTime @default(now())
   updatedAt            DateTime @updatedAt
+  expectedMembers      Int?     @default(0)
 
   userId String @db.ObjectId
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Feedback {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  message String
+
+  userId String? @db.ObjectId
+  User   User?   @relation(fields: [userId], references: [id])
 }
