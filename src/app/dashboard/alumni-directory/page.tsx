@@ -23,7 +23,7 @@ const AlumniDir = () => {
           className='w-full rounded-md border border-gray-200 px-3 py-2.5 shadow-sm focus:border-green-700 focus:outline-none sm:text-sm'
         />
 
-        <span className='absolute inset-y-0 end-0 grid w-10 place-content-center'>
+        <span className='absolute inset-y-0 end-0 z-0 grid w-10 place-content-center'>
           <button
             type='button'
             className='text-gray-600 hover:text-gray-700'

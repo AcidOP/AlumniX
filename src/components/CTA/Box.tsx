@@ -11,7 +11,7 @@ interface IProps {
 const Box = ({ heading, para, svg, link }: IProps) => {
   const Icon = svg;
   return (
-    <div className='flex p-4 md:w-1/3'>
+    <div className='flex rounded-md p-4 transition duration-300 hover:bg-green-200 md:w-1/3'>
       <div className='mb-4 inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700'>
         <Icon size={25} />
       </div>

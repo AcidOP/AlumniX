@@ -6,14 +6,15 @@ const Gallery = () => {
     <section className='body-font text-gray-600'>
       <div className='container mx-auto flex flex-wrap px-5 py-24'>
         <div className='mb-20 flex w-full flex-wrap'>
-          <h1 className='title-font mb-4 text-2xl font-medium text-gray-900 sm:text-3xl lg:mb-0 lg:w-1/3'>
-            Master Cleanse Reliac Heirloom
+          <h1 className='title-font mb-4 text-4xl font-bold text-gray-900 sm:text-3xl lg:mb-0 lg:w-1/3'>
+            Alumni Gallery
           </h1>
           <p className='mx-auto text-base leading-relaxed lg:w-2/3 lg:pl-6'>
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven&apos;t heard of them man bun deep jianbing selfies
-            heirloom.
+            Celebrating the journeys of our remarkable alumni! Explore the
+            stories, achievements, and memories that define our vibrant
+            community. Our alumni gallery showcases the diverse paths and
+            accomplishments of graduates who have made an impact around the
+            world.
           </p>
         </div>
         <div className='-m-1 flex flex-wrap md:-m-2'>

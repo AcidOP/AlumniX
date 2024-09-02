@@ -1,7 +1,7 @@
-import React from 'react';
-
 import Auth from './Auth';
+import MobileNavbar from './mobile';
 
+import { SessionProvider } from 'next-auth/react';
 import Link from 'next/link';
 
 const Header = () => {
@@ -28,6 +28,9 @@ const Header = () => {
         </Link>
 
         <Auth />
+        <SessionProvider>
+          <MobileNavbar />
+        </SessionProvider>
       </div>
     </header>
   );

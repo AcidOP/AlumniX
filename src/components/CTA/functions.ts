@@ -16,19 +16,19 @@ const functions: FunctionItem[] = [
     heading: 'Alumni Directory',
     para: 'Search and connect with alumni by graduation year, field of study, industry, or location.',
     svg: FaNetworkWired,
-    link: '',
+    link: '/dashboard/alumni-directory',
   },
   {
     heading: 'Networking Hub',
     para: 'Connect with alumni based on interests, professions, and location to enhance your professional network.',
     svg: IoLogoWechat,
-    link: '',
+    link: '/dashboard/alumni-directory',
   },
   {
     heading: 'Job Portal',
     para: 'Explore glorious career opportunities and post job openings within the strongest alumni community.',
     svg: MdWork,
-    link: '',
+    link: '/dashboard/jobs',
   },
   {
     heading: 'Success Story',
@@ -40,13 +40,13 @@ const functions: FunctionItem[] = [
     heading: 'Events and Reunions',
     para: 'Register for and participate in alumni events, reunions, and workshops to stay engaged and connected.',
     svg: GiGlassCelebration,
-    link: '',
+    link: '/dashboard/events',
   },
   {
     heading: 'Donation Portal',
     para: 'Contribute securely to support college projects and initiatives with simple online donations.',
     svg: GiReceiveMoney,
-    link: '',
+    link: '/donate',
   },
 ];
 
