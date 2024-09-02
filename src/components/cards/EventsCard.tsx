@@ -1,24 +1,26 @@
 import { format } from 'date-fns';
 
 interface AlumniEvent {
-  name: string;
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  startTime: string;
   date: string;
-  time: string;
-  destination: string;
-  typeOfEvent: string;
-  organizedBy: string;
-  registrationDeadline: string;
-  contactEmail: string;
-  attendeesExpected: number;
-  dressCode: string;
-  tags: string[];
+  registrationDeadline: string | null;
+  endTime: string;
+  eventLink: string | null;
+  eventType: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+  userId: string;
 }
 
 const EventsCard = ({
-  name,
-  destination,
-  time,
-  typeOfEvent,
+  title,
+  location,
+  startTime,
+  eventType,
   registrationDeadline,
   date,
 }: AlumniEvent) => {
@@ -34,19 +36,19 @@ const EventsCard = ({
           </h4>
         </div>
 
-        <time className='mt-1 text-center'>{time}</time>
+        <time className='mt-1 text-center'>{startTime}</time>
       </section>
 
       <section className='flex w-full flex-col lg:w-5/6'>
         <div className='flex justify-between'>
-          <h2 className='text-2xl font-black'>{name}</h2>
+          <h2 className='text-2xl font-black'>{title}</h2>
           <p className='grid h-min place-content-center rounded-full bg-gray-200 px-3 py-1'>
-            {typeOfEvent}
+            {eventType}
           </p>
         </div>
 
         <h3 className='mt-3 text-lg font-medium text-gray-600 lg:mt-0'>
-          {destination}
+          {location}
         </h3>
 
         <div className='mt-6 flex items-center'>

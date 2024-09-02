@@ -57,6 +57,32 @@ const CreateEvent = () => {
         />
       </div>
 
+      <div className='relative mb-4'>
+        <label htmlFor='email' className='text-sm leading-7 text-gray-600'>
+          Date
+        </label>
+
+        <input
+          type='text'
+          id='date'
+          name='date'
+          className='w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:ring-2 focus:ring-green-200'
+        />
+      </div>
+
+      <div className='relative mb-4'>
+        <label htmlFor='email' className='text-sm leading-7 text-gray-600'>
+          Registration Deadline
+        </label>
+
+        <input
+          type='text'
+          id='registrationDeadline'
+          name='registrationDeadline'
+          className='w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:ring-2 focus:ring-green-200'
+        />
+      </div>
+
       <div className='flex w-full gap-10'>
         <div className='relative mb-4 w-full'>
           <label

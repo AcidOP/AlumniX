@@ -19,6 +19,10 @@ const createEvent = async (formData: FormData) => {
         title: formData.get('title') as string,
         description: formData.get('description') as string,
         location: formData.get('location') as string,
+        date: formData.get('date') as string,
+        registrationDeadline: formData.get(
+          'registrationDeadline',
+        ) as string,
         startTime: formData.get('startTime') as string,
         endTime: formData.get('endTime') as string,
         eventLink: formData.get('eventLink') as string,

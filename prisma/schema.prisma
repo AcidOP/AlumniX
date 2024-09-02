@@ -106,16 +106,18 @@ model JobPosting {
 }
 
 model Event {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  title       String
-  description String
-  location    String
-  startTime   String
-  endTime     String
-  eventLink   String?
-  eventType   String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  title                String
+  description          String
+  location             String
+  startTime            String
+  date                 String
+  registrationDeadline String?
+  endTime              String
+  eventLink            String?
+  eventType            String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
 
   userId String @db.ObjectId
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
