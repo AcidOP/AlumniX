@@ -18,11 +18,9 @@ type Link = {
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggle = () => setIsOpen(!isOpen);
-
   const session = useSession();
-
-  console.log(session.data);
 
   let links;
 
