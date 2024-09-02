@@ -1,5 +1,6 @@
 import Auth from './Auth';
-import MobileNavbar from './mobile';
+import AccountMenu from './mobile/account-menu';
+import MobileNavbar from './mobile/menu';
 
 import { SessionProvider } from 'next-auth/react';
 import Link from 'next/link';
@@ -28,9 +29,14 @@ const Header = () => {
         </Link>
 
         <Auth />
-        <SessionProvider>
-          <MobileNavbar />
-        </SessionProvider>
+
+        <div className='flex items-center lg:hidden'>
+          <AccountMenu />
+
+          <SessionProvider>
+            <MobileNavbar />
+          </SessionProvider>
+        </div>
       </div>
     </header>
   );

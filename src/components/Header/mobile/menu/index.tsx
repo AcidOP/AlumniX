@@ -31,7 +31,7 @@ const Index = () => {
   }
 
   return (
-    <div className='lg:hidden'>
+    <div className='mt-1 lg:hidden'>
       <Hamburger isOpen={isOpen} toggle={toggle} />
       <AnimatePresence mode='sync'>
         {isOpen && (
