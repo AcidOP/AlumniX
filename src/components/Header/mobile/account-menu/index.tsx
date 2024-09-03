@@ -24,26 +24,11 @@ const DropdownMenu = ({ className }: IProps) => {
     return null;
   }
 
-  const dropdownLinks = [
-    {
-      url: '/account',
-      text: 'Account',
-    },
-    {
-      url: '/account/settings',
-      text: 'Account Settings',
-    },
-    {
-      url: '/logout',
-      text: 'Logout',
-    },
-  ];
-
   return (
     <div className={cn('relative lg:hidden', className)}>
       <MdAccountCircle onClick={toggle} size={35} />
       <AnimatePresence>
-        {isOpen && <Menu links={dropdownLinks} toggle={toggle} />}
+        {isOpen && <Menu toggle={toggle} />}
       </AnimatePresence>
     </div>
   );
