@@ -7,6 +7,7 @@ import Menu from './Menu';
 import cn from '@/utils/cn';
 
 import { AnimatePresence } from 'framer-motion';
+import { useSession } from 'next-auth/react';
 import { MdAccountCircle } from 'react-icons/md';
 
 interface IProps {
@@ -16,6 +17,12 @@ interface IProps {
 const DropdownMenu = ({ className }: IProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const session = useSession();
+
+  if (!session.data) {
+    return null;
+  }
 
   const dropdownLinks = [
     {

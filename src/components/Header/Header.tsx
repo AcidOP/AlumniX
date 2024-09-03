@@ -31,9 +31,8 @@ const Header = () => {
         <Auth />
 
         <div className='flex items-center lg:hidden'>
-          <AccountMenu />
-
           <SessionProvider>
+            <AccountMenu />
             <MobileNavbar />
           </SessionProvider>
         </div>
