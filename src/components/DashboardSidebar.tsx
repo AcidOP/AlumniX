@@ -50,7 +50,6 @@ const DashboardSidebar = () => {
 
               <ul className='mt-2 space-y-1 px-4'>
                 <MenuBtn link='/account' text='Profile' />
-                <MenuBtn link='/account/settings' text='Settings' />
 
                 <button
                   onClick={signOut}
