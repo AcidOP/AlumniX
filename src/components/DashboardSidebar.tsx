@@ -1,6 +1,19 @@
+'use client';
+
 import MenuBtn from './buttons/MenuBtn';
 
+import logout from '@/actions/logout';
+
+import { useRouter } from 'next/navigation';
+
 const DashboardSidebar = () => {
+  const router = useRouter();
+
+  const signOut = async () => {
+    await logout();
+    router.push('/');
+  };
+
   return (
     <div className='hidden h-[80vh] flex-col justify-between lg:flex'>
       <div className='w-max px-4 pb-6'>
@@ -38,7 +51,13 @@ const DashboardSidebar = () => {
               <ul className='mt-2 space-y-1 px-4'>
                 <MenuBtn link='/account' text='Profile' />
                 <MenuBtn link='/account/settings' text='Settings' />
-                <MenuBtn link='/signout' text='Log Out' />
+
+                <button
+                  onClick={signOut}
+                  className='block w-full cursor-pointer rounded-lg px-4 py-2 text-start text-sm font-medium text-red-500 hover:bg-red-500 hover:text-gray-100'
+                >
+                  Logout
+                </button>
               </ul>
             </details>
           </li>
